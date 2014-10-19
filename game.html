@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<title>Velocity | 5th Studios</title>
+<body>
+<style>
+body {
+    /*background-color: #CCEEFF;*/
+  height: 200px;
+  margin: 0 0 20px 0;
+  background-color: #eaeaea;
+  background-size: 20px 20px;
+  background-image:
+     -webkit-repeating-linear-gradient(45deg, rgba(0, 191, 255, .5), rgba(0, 191, 255, .5) 1px, transparent 1px, transparent 15px),
+     -webkit-repeating-linear-gradient(-45deg, rgba(255, 105, 180, .5), rgba(255, 105, 180, .5) 1px, transparent 1px, transparent 15px);
+  background-image:
+     -moz-repeating-linear-gradient(45deg, rgba(0, 191, 255, .5), rgba(0, 191, 255, .5) 1px, transparent 1px, transparent 15px),
+     -moz-repeating-linear-gradient(-45deg, rgba(255, 105, 180, .5), rgba(255, 105, 180, .5) 1px, transparent 1px, transparent 15px);
+  background-image:
+     -o-repeating-linear-gradient(45deg, rgba(0, 191, 255, .5), rgba(0, 191, 255, .5) 1px, transparent 1px, transparent 15px),
+     -o-repeating-linear-gradient(-45deg, rgba(255, 105, 180, .5), rgba(255, 105, 180, .5) 1px, transparent 1px, transparent 15px);
+  background-image:
+     repeating-linear-gradient(45deg, rgba(0, 191, 255, .5), rgba(0, 191, 255, .5) 1px, transparent 1px, transparent 15px),
+     repeating-linear-gradient(-45deg, rgba(255, 105, 180, .5), rgba(255, 105, 180, .5) 1px, transparent 1px, transparent 15px);
+
+}
+
+#wrapper h1{
+ font:normal 32pt Arial;
+ color:#FFFFFF;
+ text-shadow: 0 1px 0 #ccc,
+ 0 2px 0 #c9c9c9,
+ 0 3px 0 #bbb,
+ 0 4px 0 #b9b9b9,
+ 0 5px 0 #aaa,
+ 0 6px 1px rgba(0,0,0,.1),
+ 0 0 5px rgba(0,0,0,.1),
+ 0 1px 3px rgba(0,0,0,.3),
+ 0 3px 5px rgba(0,0,0,.2),
+ 0 5px 10px rgba(0,0,0,.25),
+ 0 10px 10px rgba(0,0,0,.2),
+ 0 20px 20px rgba(0,0,0,.15);
+}
+
+#wrapper p{
+ font:normal 16pt Arial;
+ color:#FFFFFF;
+ text-shadow: 0 1px 0 #ccc,
+ 0 2px 0 #c9c9c9,
+ 0 3px 0 #bbb,
+ 0 4px 0 #b9b9b9,
+ 0 5px 0 #aaa,
+ 0 6px 1px rgba(0,0,0,.1),
+ 0 0 5px rgba(0,0,0,.1),
+ 0 1px 3px rgba(0,0,0,.3),
+ 0 3px 5px rgba(0,0,0,.2),
+ 0 5px 10px rgba(0,0,0,.25),
+ 0 10px 10px rgba(0,0,0,.2),
+ 0 20px 20px rgba(0,0,0,.15);
+}
+
+section[role="main"]{
+background:#000 url(http://zurb.com/playground/uploads/upload/upload/88/maelstrom.png) center -86px no-repeat;
+}
+
+#osxdock-page{
+color:#fff;
+padding-bottom:2em;
+margin-bottom:-2em;
+}
+
+#osxdock-page h1,#osxdock-page h2{
+color:#fff;
+}
+
+div#sidebarAd.cleanslate{
+background:rgba(0,0,0,0.5)!important;
+color:#fff!important;
+}
+
+div#sidebarAd.cleanslate .ad-sponsor{color:#ccc;}
+
+.zurb-footer-top{background:#222;}
+
+div.cap{
+display:block;
+height:100px;
+width:40px;
+background:url(http://zurb.com/playground/playground/osx-dock/dock-background-left.png) bottom left no-repeat;
+}
+
+div.cap.left{
+position:absolute;
+bottom:0px;
+left:0px;
+}
+
+div.cap.right{
+background-position:right bottom;
+position:absolute;
+top:0px;right:0px;
+}
+
+ul.osx-dock{
+display:inline-block;
+height:130px;
+padding:0 40px 0 0;
+background:url(http://zurb.com/playground/playground/osx-dock/dock-background-left.png) no-repeat right bottom;
+overflow:hidden;
+margin:0 0 0 40px;
+}
+
+ul.osx-dock li{
+display:block;
+position:relative;
+float:left;
+width:50px;
+height:50px;
+margin:60px 0 4px 0;
+-webkit-transition:0.15s linear;
+-webkit-transition-property:-webkit-transform margin;
+text-align:center;
+}
+
+ul.osx-dock li a{
+display:block;
+height:50px;
+padding:0 1px;
+-webkit-transition:0.15s linear;
+-webkit-transition-property:-webkit-transform margin;
+margin:0;
+-webkit-box-reflect:below 2px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(0.45,transparent),to(rgba(255,255,255,0.25)));
+}
+
+ul.osx-dock li a img{
+width:48px;
+}
+
+ul.osx-dock li:hover{
+margin-left:9px;
+margin-right:9px;
+z-index:200;
+}
+
+ul.osx-dock li:hover a{
+-webkit-transform-origin:center bottom;
+-webkit-transform:scale(1.5);
+}
+
+ul.osx-dock li.nearby{
+margin-left:6px;
+margin-right:6px;
+z-index:100;
+}
+
+ul.osx-dock li.nearby a{
+-webkit-transform-origin:center bottom;
+-webkit-transform:scale(1.25);
+}
+
+ul.osx-dock li span{
+background:rgba(0,0,0,0.75);
+position:absolute;
+bottom:80px;margin:0 auto;
+display:none;
+width:auto;
+font-size:11px;
+font-weight:bold;
+padding:3px 6px;
+-webkit-border-radius:6px;color:#fff;
+}
+
+ul.osx-dock li:hover span{
+display:block;
+}
+
+div#dockContainer{
+position:fixed;
+bottom:12px;
+height:120px;
+padding:50px 0 0;
+text-align:center;
+-webkit-border-radius:6px;
+-moz-border-radius:6px;
+width:100%;
+line-height:1;
+z-index:100;
+}
+
+div#dockWrapper{
+width:auto;
+display:inline-block;
+position:relative;
+border-bottom:solid 2px rgba(255,255,255,.35);
+line-height:0;
+}
+
+#dockContainer,#dockContainer *{
+-webkit-box-sizing:content-box;
+-moz-box-sizing:content-box;
+box-sizing:content-box
+}
+</style>
+<script src="js/game.js"></script>
+<input id="start" type="button" value="Start!" onclick="start();" />
+<div id="wrapper">
+<h1>Velocity</h1>
+<p>This is a game about a bird who is trying to get some apples! The more you play, the faster you fall down, so be quick!</p>
+<p></p>
+<p>Made by Jadon Fowler</p>
+</div>
+</body>
+
+</html>
